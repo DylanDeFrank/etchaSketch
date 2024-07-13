@@ -4,10 +4,16 @@ for (i=0; i <= 255; i++) {
     container.style.flexWrap = 'wrap'
     container.style.maxWidth = '690px'
     let divGrid = document.createElement('div');
+    divGrid.classList.add('grid')
     divGrid.style.cssText = 'height: 40px; width: 40px; border: 1px solid black;' ;
     container.appendChild(divGrid); 
 }
+const divGrids = document.querySelectorAll('.grid')
 
-addEventListener('onmouseenter', () => {
-    div.style.color = 'green'
+divGrids.forEach((grid) => {
+    grid.addEventListener('mouseover', () => {
+        grid.style.backgroundColor = 'green'
+    })
+
 })
+
